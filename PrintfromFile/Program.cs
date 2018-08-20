@@ -13,7 +13,7 @@ namespace PrintfromFile
         static void Main(string[] args)
         {
             ReadData();
-            
+
         }
 
 
@@ -25,10 +25,13 @@ namespace PrintfromFile
             using (StreamReader sr =
                 new StreamReader(path: "C:\\Users\\Juan Monge\\source\\repos\\PrintfromFile\\TESTPRACTICE.txt"))
             {
+                sr.ReadLine();
+
                 if (sr != null)
                 {
                     while (sr.Peek() >= 0)
                     {
+
                         string str;
                         string[] strArray;
                         str = sr.ReadLine();
@@ -46,13 +49,17 @@ namespace PrintfromFile
                         Console.WriteLine(currentPerson);
                         Console.Write(str);
                         Console.ReadKey();
+
+                        sr.ReadToEnd();
                     }
                 }
+
                 else
                 {
                     Console.WriteLine("Not able to find a .txt for reading.");
                 }
 
+                
             }
 
         }

@@ -13,8 +13,9 @@ namespace PrintfromFile
         static void Main(string[] args)
         {
             ReadData();
+            
         }
-        
+
 
         public static void ReadData()
         {
@@ -37,18 +38,19 @@ namespace PrintfromFile
 
                         currentPerson.Name = strArray[0];
                         currentPerson.Lastname = strArray[1];
-                        currentPerson.Age = Convert.ToInt32(strArray[2]);
-                        currentPerson.SocialSecurity = (strArray[3]);
-                        currentPerson.Residence = (strArray[4]);
+                        currentPerson.Age = (strArray[2]);
+                        currentPerson.SocialSecurity = (strArray[4]);
+                        currentPerson.Residence = (strArray[5]);
 
                         persondata.Add(currentPerson);
                         Console.WriteLine(currentPerson);
+                        Console.Write(str);
                         Console.ReadKey();
                     }
                 }
                 else
                 {
-                    Console.WriteLine("no textFile t");
+                    Console.WriteLine("Not able to find a .txt for reading.");
                 }
 
             }

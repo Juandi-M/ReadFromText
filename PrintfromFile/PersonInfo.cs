@@ -10,7 +10,7 @@ namespace PrintfromFile
     {
         public string Name { get; set; }
         public string Lastname { get; set; }
-        public int Age { get; set; }
+        public string Age { get; set; }
         public string SocialSecurity { get; set; }
         public string Residence { get; set; }
 
